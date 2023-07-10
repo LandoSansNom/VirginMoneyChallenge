@@ -1,9 +1,10 @@
 package com.example.virginmoneychallenge.data.di
 
-import com.example.harrypotter.data.remote.harryPotterCall
 import com.example.harrypotter.data.remote.ApiDetails
-import com.example.harrypotter.data.repository.Repository
-import com.example.harrypotter.data.repository.RepositoryImplementation
+import com.example.harrypotter.data.remote.ColleaguesCall
+import com.example.harrypotter.data.remote.RoomsCall
+import com.example.virginmoneychallenge.data.repository.Repository
+import com.example.virginmoneychallenge.data.repository.RepositoryImplementation
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,17 +39,25 @@ class AppModule {
     }
 
     @Provides
-    fun provideAPI(
+    fun provideAPIColleague(
         retrofit: Retrofit
-    ): harryPotterCall {
-        return retrofit.create(harryPotterCall::class.java)
+    ): ColleaguesCall {
+        return retrofit.create(ColleaguesCall::class.java)
+    }
+
+    @Provides
+    fun provideAPIRoom(
+        retrofit: Retrofit
+    ): RoomsCall {
+        return retrofit.create(RoomsCall::class.java)
     }
 
     @Provides
     fun provideRepository(
-        harryPotterCall: harryPotterCall
-    ): Repository{
-        return RepositoryImplementation(harryPotterCall)
+        colleaguesCall: ColleaguesCall,
+        roomsCall: RoomsCall
+    ): Repository {
+        return RepositoryImplementation(colleaguesCall, roomsCall)
     }
 
 }
