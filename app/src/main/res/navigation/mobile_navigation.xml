@@ -8,18 +8,29 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.virginmoneychallenge.ui.colleagues.ColleagueFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_colleague" />
+        android:label="@string/title_colleague"
+        tools:layout="@layout/fragment_colleague" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_detail_colleague"
+            app:destination="@id/navigation_detail_colleague" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.virginmoneychallenge.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="com.example.virginmoneychallenge.ui.room.RoomFragment"
+        android:label="@string/rooms"
+        tools:layout="@layout/fragment_room" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.virginmoneychallenge.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/settings"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_detail_colleague"
+        android:name="com.example.virginmoneychallenge.ui.colleagues.ColleagueDetailFragmeny"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_notifications" />
+
 </navigation>

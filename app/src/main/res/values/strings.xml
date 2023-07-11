@@ -2,9 +2,9 @@
     <string name="default_web_client_id" translatable="false">1093739921666-ib3a45041uvtovgjst7ntoso137l7ec8.apps.googleusercontent.com</string>
 
     <string name="app_name">VirginMoneyChallenge</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_colleague">Colleagues</string>
+    <string name="rooms">Rooms</string>
+    <string name="settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -21,4 +21,17 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="or_login_with">Or login with</string>
+    <string name="first_name">First name: %1$s</string>
+    <string name="last_name">Last name: %1$s</string>
+    <string name="email_detail">Email: %1$s</string>
+    <string name="job_title">Job title: %1$s</string>
+    <string name="favourite_color">Favourite color: %1$s</string>
+
+    <string name="facebook_app_id">953344755946682</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">313484da46060cbcb7becc8174bcfee5</string>
+    <string name="is_occupied">Is occupied: %1$s</string>
+    <string name="occupancy">Occupancy: %1$s</string>
+    <string name="created_date">Created date: %1$s</string>
+
 </resources>
