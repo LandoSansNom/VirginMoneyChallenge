@@ -5,6 +5,7 @@ import com.example.virginmoneychallenge.data.model.Colleague
 import com.example.virginmoneychallenge.data.repository.Repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.StandardTestDispatcher
+import kotlinx.coroutines.test.TestDispatcher
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import org.junit.After
@@ -52,6 +53,8 @@ class ColleagueViewModelTest {
 
         // Call the method to be tested
         viewModel.getAllColleagues()
+
+        testDispatcher.scheduler.advanceUntilIdle()
 
         // Verify the expected behavior
         assert(viewModel.isLoading.value == true)
