@@ -9,12 +9,12 @@ plugins {
 
 android {
     namespace 'com.example.virginmoneychallenge'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.virginmoneychallenge"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -37,6 +37,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+
 }
 
 dependencies {
@@ -83,7 +84,21 @@ dependencies {
     // Gson
     implementation 'com.google.code.gson:gson:2.10.1'
 
+    //mockito
+    testImplementation 'org.mockito:mockito-core:3.8.0'
+    androidTestImplementation 'org.mockito:mockito-android:2.2.0'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    //test coroutine
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.google.android.material:material:1.10.0-alpha05'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
 }
